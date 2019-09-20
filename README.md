@@ -1,14 +1,24 @@
 <!--h-->
 # Ajaxios
 
-a simple library based on axios to sending data from using with just passing the element form to the constructor  Ajaxios
+a simple library based on axios to sending data from using with just passing the element form to the constructor Ajaxios
+before using Ajaxios you most read documentation of  [Axois](https://github.com/axios/axios)
 
-<ul> <h2>Requirements</h2
-    <li> Axios
-</ul>
 
-### installation
+### -> Requirements
+     -Axios 
+     npm install Axois
+     npm install @belharradi.j/ajaxios
+     
+     ------------ or ----------
+     
+     include in head tag the script 
+     
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     
+### -> Installation
      the installaion is simple
+     
      npm install @belharradi.j/ajaxios
      
      ------------ or ----------
@@ -17,24 +27,23 @@ a simple library based on axios to sending data from using with just passing the
      
      <script src="../js/Ajaxois/index.js"></script>
      
-### documentation
+### -> Documentation
 
 the usage it's simple just follow the steps
 
 
-#### Create a form html
+#### -> Create a form html
         
         <form action="/host/pah" method="GET" id="form">
                   <label> input filied </label>
                   <input type="text" name="input" value=" text ..."/>
                   <input type="button"  id="send" value="send">
         </from>
- #### Create A instanse of Ajaxios
-        
+ #### -> Create A instanse of Ajaxios  
          just pass the element form to Ajaxios it get all infromation  
-         
-         var ajaxios = new Ajaxios(document.getElementById('form'));
-#### Appending data 
+         var axios = require('axios');
+         var ajaxios = new Ajaxios(document.getElementById('form'),axios);
+#### -> Appending data 
         
           you can append data to Ajaxios before you sending
          
@@ -45,7 +54,7 @@ the usage it's simple just follow the steps
            ..................
          }
          );
-#### validation 
+#### -> Validation 
          
          the amazing thing it's you testing data before sending 
          request will be send if all function of the keys_parameter return true
@@ -61,10 +70,9 @@ the usage it's simple just follow the steps
            .................
           }
           
-#### sending request 
+#### -> Sending request 
           
           before you sending the request you can execute a function and test the validate object
-          
           ajaxios.send(()=>{
               console.log("the request is sending ..........");
           },validate);
