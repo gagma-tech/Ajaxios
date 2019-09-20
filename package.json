@@ -1,0 +1,26 @@
+{
+  "name": "belharradi.j",
+  "version": "1.0.0",
+  "description": "sending ajax with form",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamalroger/Ajaxios.git"
+  },
+  "keywords": [
+    "ajax",
+    "form",
+    "axios",
+    "data"
+  ],
+  "author": "BELHERRADI JAMAL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamalroger/Ajaxios/issues"
+  },
+  "homepage": "https://github.com/jamalroger/Ajaxios#readme"
+  
+}
