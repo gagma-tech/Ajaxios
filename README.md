@@ -73,9 +73,20 @@ the usage it's simple just follow the steps
 #### -> Sending request 
           
           before you sending the request you can execute a function and test the validate object
+          the function send is return axios object
+          document.getElementById('send').click=()=>{
           ajaxios.send(()=>{
               console.log("the request is sending ..........");
-          },validate);
+              document.getElementById('send').innerHTML="sending"
+
+          },validate).then(function(res){
+
+               document.getElementById('send').innerHTML="send"
+
+          });
+          }
+
+          if you want to use axios just call ajaxios.axios object
 
 
 
