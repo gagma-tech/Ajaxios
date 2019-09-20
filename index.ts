@@ -37,8 +37,9 @@ export class Ajaxios {
               for(var key in object_data) 
                    this.data[key]=object_data[key];
          }
-
-       public send(before,require){
+         
+         // sending request using ajax
+         public send(before,require){
            
             if(!this.validate(require))
                        return null;

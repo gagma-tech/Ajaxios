@@ -1,5 +1,6 @@
 "use strict";
 var Ajaxios = /** @class */ (function () {
+    
     function Ajaxios(eleform) {
         this.method = eleform.method;
         this.url = eleform.action;
