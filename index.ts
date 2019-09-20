@@ -7,12 +7,14 @@ export class Ajaxios {
     private url:string;
     private data:Object;
     private form:FormData;
+    private axios:any;
 
-       constructor(eleform){
+       constructor(eleform,axios){
          this.method=eleform.method;
          this.url=eleform.action;
          this.form=new FormData(eleform);
          this.data=this.dict(this.form);
+         this.axios=axios;
         }
 
         // return object from FormData
@@ -37,14 +39,14 @@ export class Ajaxios {
               for(var key in object_data) 
                    this.data[key]=object_data[key];
          }
-         
+
          // sending request using ajax
          public send(before,require){
            
             if(!this.validate(require))
                        return null;
              before();
-             return axios({
+             return this.axios({
                      method: this.method,
                      url: this.url,
                      params:this.data

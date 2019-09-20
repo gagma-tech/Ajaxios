@@ -1,5 +1,5 @@
 {
-  "name": "ajaxios",
+  "name": "@belherradi.j/ajaxios",
   "version": "1.0.0",
   "description": "sending ajax with form",
   "main": "index.js",
