@@ -1,6 +1,6 @@
 {
   "name": "@belharradi.j/ajaxios",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "sending ajax with form",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/jamalroger/Ajaxios/issues"
   },
-  "homepage": "https://github.com/jamalroger/Ajaxios#readme",
-  "dependencies": {
-    "axios": "^1.0.0"
-  }
+  "homepage": "https://github.com/jamalroger/Ajaxios#readme"
 }
