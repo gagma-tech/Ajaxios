@@ -7,7 +7,7 @@ export class Ajaxios {
     private url:string;
     private data:Object;
     private form:FormData;
-    private axios:any;
+    public axios:any;
 
        constructor(eleform,axios){
          this.method=eleform.method;

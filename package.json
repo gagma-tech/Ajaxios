@@ -1,6 +1,6 @@
 {
   "name": "@belharradi.j/ajaxios",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "sending ajax with form",
   "main": "index.js",
   "scripts": {
