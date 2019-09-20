@@ -1,5 +1,5 @@
 {
-  "name": "@belherradi.j/ajaxios",
+  "name": "@belharradi.j/ajaxios",
   "version": "1.0.0",
   "description": "sending ajax with form",
   "main": "index.js",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/jamalroger/Ajaxios#readme",
   "dependencies": {
-    "belherradi.j": "^1.0.0"
+    "axios": "^1.0.0"
   }
 }
