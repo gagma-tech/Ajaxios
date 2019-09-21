@@ -8,7 +8,7 @@ before using Ajaxios you most read documentation of  [Axois](https://github.com/
 ### -> Requirements
      -Axios 
      npm install Axois
-     npm install @belharradi.j/ajaxios
+   
      
      ------------ or ----------
      
