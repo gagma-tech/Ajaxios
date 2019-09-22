@@ -1,5 +1,4 @@
 "use strict";
-exports.__esModule = true;
 var Ajaxios = /** @class */ (function () {
     function Ajaxios(eleform, axios) {
         this.method = eleform.method;
