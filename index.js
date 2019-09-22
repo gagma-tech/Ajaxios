@@ -9,12 +9,9 @@ var Ajaxios = /** @class */ (function () {
         this.axios = axios;
     }
     // return object from FormData
-    Ajaxios.prototype.dict = function (form) {
+    Ajaxios.prototype.dict = function (formData) {
         var data = {};
-        for (var _i = 0, _a = form.entries(); _i < _a.length; _i++) {
-            var d = _a[_i];
-            data[d[0]] = d[1];
-        }
+        formData.forEach(function (value, key) { data[key] = value; });
         return data;
     };
     // test parameter before sending

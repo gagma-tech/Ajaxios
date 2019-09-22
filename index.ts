@@ -18,13 +18,12 @@ export class Ajaxios {
         }
 
         // return object from FormData
-       public dict(form):Object{
-
+       public dict(formData):Object{
         var data={};
-        for(let d of form.entries())
-                    data[d[0]]=d[1];
+        formData.forEach((value, key) => {data[key]=value;});
          return data;
        }
+
        // test parameter before sending
        public validate(data_validate)
         {
