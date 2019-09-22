@@ -7,7 +7,7 @@ before using Ajaxios you most read documentation of  [Axois](https://github.com/
 
 ### -> Requirements
      -Axios 
-     npm install Axois
+     npm install axois
    
      
      ------------ or ----------
@@ -42,6 +42,8 @@ the usage it's simple just follow the steps
  #### -> Create A instanse of Ajaxios  
          just pass the element form to Ajaxios it get all infromation  
          var axios = require('axios');
+         if you are using cdn axios and Ajaxios is defined by default
+         
          var ajaxios = new Ajaxios(document.getElementById('form'),axios);
 #### -> Appending data 
         
