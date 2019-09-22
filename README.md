@@ -38,7 +38,7 @@ the usage it's simple just follow the steps
                   <label> input filied </label>
                   <input type="text" name="input" value=" text ..."/>
                   <input type="button"  id="send" value="send">
-        </from>
+        </form>
  #### -> Create A instanse of Ajaxios  
          just pass the element form to Ajaxios it get all infromation  
          var axios = require('axios');
