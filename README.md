@@ -8,7 +8,7 @@ before using Ajaxios you most read documentation of  [Axois](https://github.com/
 ### -> Requirements
      -Axios 
      npm install Axois
-     npm install @belharradi.j/ajaxios
+   
      
      ------------ or ----------
      
@@ -25,7 +25,7 @@ before using Ajaxios you most read documentation of  [Axois](https://github.com/
      
      include in head tag the script 
      
-     <script src="../js/Ajaxois/index.js"></script>
+     <script src="https://unpkg.com/@belharradi.j/ajaxios@1.1.2/index.js"></script>
      
 ### -> Documentation
 
