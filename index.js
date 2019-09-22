@@ -1,4 +1,9 @@
 "use strict";
+if(typeof exports !== 'undefined')
+         exports.__esModule = true;
+else 
+         var exports = {"__esModule": true};
+
 var Ajaxios = /** @class */ (function () {
     function Ajaxios(eleform, axios) {
         this.method = eleform.method;
@@ -10,7 +15,7 @@ var Ajaxios = /** @class */ (function () {
     // return object from FormData
     Ajaxios.prototype.dict = function (formData) {
         var data = {};
-        formData.forEach(function (value, key) { data[key] = value; });
+        formData.forEach(function(value, key) { data[key] = value; });
         return data;
     };
     // test parameter before sending
