@@ -44,7 +44,9 @@ the usage it's simple just follow the steps
          var axios = require('axios');
          if you are using cdn axios and Ajaxios is defined by default
          
-         var ajaxios = new Ajaxios(document.getElementById('form'),axios);
+         var ajaxios = new Ajaxios(document.getElementById('form'),validate,axios);
+         
+         warring the validate object is is require look at validation steps
 #### -> Appending data 
         
           you can append data to Ajaxios before you sending

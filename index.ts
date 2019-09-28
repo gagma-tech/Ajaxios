@@ -2,35 +2,38 @@ declare const axios:any;
 
 export class Ajaxios {
 
-
-    private method:string;
-    private url:string;
+    private eleform:any;
     private data:Object;
-    private form:FormData;
+    private requirements:Object;
     public axios:any;
 
-       constructor(eleform,axios){
-         this.method=eleform.method;
-         this.url=eleform.action;
-         this.form=new FormData(eleform);
-         this.data=this.dict(this.form);
+       constructor(eleform,axios,requirements){
+         this.eleform=eleform;
+         this.requirements=requirements;
+         this.data={};
          this.axios=axios;
+         this.validation(requirements);
         }
 
         // return object from FormData
-       public dict(formData):Object{
-        var data={};
-        formData.forEach((value, key) => {data[key]=value;});
-         return data;
+       public dict(){
+        new FormData(this.eleform).forEach((value, key) => {this.data[key]=value;});
        }
 
        // test parameter before sending
        public validate(data_validate)
         {
-            for(var key in data_validate)
+            for(let key in data_validate)
                 if(!data_validate[key](this.data[key])) return 0;
             
             return 1;
+        }
+
+        public validation(dataObject){
+            
+            for(let key in dataObject)
+                this.eleform[key].addEventListener('change',(e)=>{ dataObject[key](this.eleform[key].value); },false);
+                
         }
         // append query to data
         public append(object_data)
@@ -40,16 +43,18 @@ export class Ajaxios {
          }
 
          // sending request using ajax
-         public send(before,require){
-           
-            if(!this.validate(require))
-                       return null;
+         public send(before){
+             this.dict();           
              before();
-             return this.axios({
-                     method: this.method,
-                     url: this.url,
-                     params:this.data
-                      });
+             try{
+                if(!this.validate(this.requirements)) throw "invalid data";
+                  return this.axios({
+                                    method: this.eleform.method,
+                                    url: this.eleform.action,
+                                    params:this.data
+                                  });
+            } catch(err){ console.log(err); }
+            
          }
 
 }
