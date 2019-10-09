@@ -1,18 +1,26 @@
-declare const axios:any;
+interface options {
+    eleform:any;
+    http:any;
+    type:String;
+    headers:Object;
+}
 
 export class Ajaxios {
+    public eleform:any;
+    public data:Object;
+    public requirements:Object;
+    public  http:any;
+    public type:any;
+    public headers:any;
 
-    private eleform:any;
-    private data:Object;
-    private requirements:Object;
-    public axios:any;
-
-       constructor(eleform,axios,requirements){
-         this.eleform=eleform;
-         this.requirements=requirements;
-         this.data={};
-         this.axios=axios;
-         this.validation(requirements);
+       constructor(options:options,requirements:Object={}){
+                this.eleform=options.eleform;
+                this.requirements=requirements;
+                this.data={};
+                this.http=options.http;
+                this.type=options.type || "fetch";//$.ajax,fetch,request,axios,httpclient
+                this.headers=options.headers || {};
+                this.validation(requirements);
         }
 
         // return object from FormData
@@ -28,7 +36,7 @@ export class Ajaxios {
             
             return 1;
         }
-
+         // validation of requirements
         public validation(dataObject){
             
             for(let key in dataObject)
@@ -42,17 +50,42 @@ export class Ajaxios {
                    this.data[key]=object_data[key];
          }
 
-         // sending request using ajax
-         public send(before){
+         //sending request using ajax
+         public send(beforeSend=()=>{}){
              this.dict();           
-             before();
+             beforeSend();
              try{
                 if(!this.validate(this.requirements)) throw "invalid data";
-                  return this.axios({
-                                    method: this.eleform.method,
-                                    url: this.eleform.action,
-                                    params:this.data
-                                  });
+                let data=this.data;
+                  if(this.type==="Axios"){
+                            return this.http({
+                                            method: this.eleform.method,
+                                            url: this.eleform.action,
+                                            params:data,
+                                            headers:this.headers,
+                                        });
+                                    }
+                       
+                 if(this.type==="HttpClient"){
+                     
+                                      return this.http[this.eleform.method](this.eleform.action,data,{headers:new Headers(this.headers)});
+                                    }
+
+                if(this.type==="JqueryAjax"){
+                                        
+                                         return this.http({
+                                             url:this.eleform.action,
+                                             method:this.eleform.method,
+                                             data:data,
+                                             headers:this.headers
+                                             });
+                                       }
+                return fetch(this.eleform.action,{
+                            method: this.eleform.action,
+                            headers: new Headers(this.headers),
+                            body: JSON.stringify(data)
+                });
+
             } catch(err){ console.log(err); }
             
          }
