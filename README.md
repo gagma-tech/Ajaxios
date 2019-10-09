@@ -6,11 +6,11 @@ with Jquey,Angular,Vuejs,Rectjs
 
 
 ### -> Requirements
-      Ajxios have no requirements that by default it's require just fetch api but implements in most browser
+      Ajxios have no requirements that by default it's require just http api 
       you can use any of this api 
       HttpClient for Angular 
       Jquery.ajax for Jquery
-      Axios for Reactjs,Vuejs
+      Axios,or fecth for Reactjs,Vuejs
      
 ### -> Installation
      the installaion is simple
@@ -45,7 +45,7 @@ the usage it's simple just follow the steps
             {
             eleform:document.getElementById('form'),// element of form
             http:axios,// http api used for sending request like httpclient,$.ajax,axios
-            type:"Axios"// type of Object http it can be ["Axios","Jquery.ajax","HttpClient"] by default its "fetch"
+            type:"Axios"// type of Object http it can be ["Axios","Jquery.ajax","HttpClient","fetch"] 
             headers:{Authorization:"toke",
                     ............
             },// object of headers 
