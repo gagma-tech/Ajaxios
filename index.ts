@@ -13,13 +13,15 @@ export class Ajaxios {
     public type:any;
     public headers:any;
 
-       constructor(options:options,requirements:Object={}){
-                this.eleform=options.eleform;
-                this.requirements=requirements;
-                this.data={};
-                this.http=options.http;
-                this.type=options.type || "fetch";//$.ajax,fetch,request,axios,httpclient
-                this.headers=options.headers || {};
+    
+       public initForm(options:options,requirements:Object={}){
+
+                this.eleform = options.eleform;
+                this.requirements = requirements;
+                this.data = { };
+                this.http = options.http;
+                this.type = options.type;//$.ajax,fetch,request,axios,httpclient
+                this.headers = options.headers;
                 this.validation(requirements);
         }
 
