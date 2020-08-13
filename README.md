@@ -13,6 +13,7 @@ with Jquey,Angular,Vuejs,Rectjs
       Axios,or fecth for Reactjs,Vuejs
      
 ### -> Installation
+```
      the installaion is simple
      
      npm install @belharradi.j/ajaxios
@@ -22,6 +23,7 @@ with Jquey,Angular,Vuejs,Rectjs
      include in head tag the script 
      
      <script src="https://unpkg.com/@belharradi.j/ajaxios"></script>
+```
      
 ### -> Documentation
 
@@ -29,6 +31,7 @@ the usage it's simple just follow the steps
 
 
 #### -> Create a form html
+```html
 
         <form action="host/pah" method="GET" id="form">
         
@@ -38,10 +41,12 @@ the usage it's simple just follow the steps
                   
                   <input type="button"  id="send" value="send">
         </form>
+```
  #### -> Create A instance of Ajaxios 
-          for create a instance of ajaxios
+ ```js
+             // for create a instance of ajaxios
             var ajax= new Ajaxios(options,requirements ={});
-            options it's a object like :
+            // options it's a object like :
             {
             eleform:document.getElementById('form'),// element of form
             http:axios,// http api used for sending request like httpclient,$.ajax,axios
@@ -50,10 +55,11 @@ the usage it's simple just follow the steps
                     ............
             },// object of headers 
             }
-            for Requirements look at validation step
+            // for Requirements look at validation step
+ //
 #### -> Appending data 
-        
-          you can append data to Ajaxios before you sending
+ ```js     
+          //you can append data to Ajaxios before you sending
          
          var ajaxios.append(
          {
@@ -62,10 +68,12 @@ the usage it's simple just follow the steps
            ..................
          }
          );
+```
 #### -> Validation 
+```js      
+         //the amazing thing it's you testing data in real Time editing by user before sending 
+         //request will be send if all function of the keys_parameter return true
          
-         the amazing thing it's you testing data in real Time editing by user before sending 
-         request will be send if all function of the keys_parameter return true
          requerments = {
            keys_parameter:(values_of_key)=>{
               
@@ -78,12 +86,13 @@ the usage it's simple just follow the steps
            ..................
            .................
           }
-          
+ ```
+ 
 #### -> Sending request 
+ ```js         
+         // before you sending the request you can execute a function passing as arguments for method send
           
-          before you sending the request you can execute a function passing as arguments for method send
-          
-          the function send return A promise Http Object like Httpclient, $.ajax, fetch or axios
+        // the function send return A promise Http Object like Httpclient, $.ajax, fetch or axios
           
           document.getElementById('send').click=()=>{
           
@@ -108,10 +117,9 @@ the usage it's simple just follow the steps
           }
           
 
-          if you want to use http api just call ajax.http
+        //  if you want to use http api just call ajax.http
 
-
-
+```
 
 
 
