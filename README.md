@@ -1,5 +1,10 @@
-<!--h-->
+
 # Ajaxios
+
+[![npm version](https://img.shields.io/npm/v/handerrors.svg?style=flat-square)](https://www.npmjs.org/package/@belharradi.j/ajaxios)
+[![install size](https://packagephobia.now.sh/badge?p=@belharradi.j/ajaxios)](https://packagephobia.now.sh/result?p=@belharradi.j/ajaxios)
+[![npm downloads](https://img.shields.io/npm/dm/handerrors.svg?style=flat-square)](http://npm-stat.com/charts.html?package=@belharradi.j/ajaxios)
+
 no more coding to sending 
 a simple library Based on your HttpClient request to sending  request ajax using from it's very simple that's can be used 
 with Jquey,Angular,Vuejs,Rectjs 
